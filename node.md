@@ -1,9 +1,9 @@
 **1. Is JavaScript single threaded or multi threaded?**
-  - JavaScript is primarily single-threaded, executing one task at a time.
-  - Asynchronous behavior is possible in JavaScript through concepts like callbacks, promises, and async/await.
-  - The Event Loop manages the execution of asynchronous operations in an event-driven manner.
-  - JavaScript can interact with multi-threaded environments like web browsers through Web APIs such as Web Workers.
-  - Understanding JavaScript's single-threaded nature is essential for writing efficient and responsive code.
+  - 💡 JavaScript is primarily single-threaded, executing one task at a time.
+  - 💡 Asynchronous behavior is possible in JavaScript through concepts like callbacks, promises, and async/await.
+  - 💡 The Event Loop manages the execution of asynchronous operations in an event-driven manner.
+  - 💡 JavaScript can interact with multi-threaded environments like web browsers through Web APIs such as Web Workers.
+  - 💡 Understanding JavaScript's single-threaded nature is essential for writing efficient and responsive code.
     
 **2. Explain how nodejs handles async operations?**
     ![image](https://github.com/Malong11-007/JS-interview-questions/assets/40298510/2493a28c-0f6a-49ac-b1da-f484ead37352)
@@ -26,3 +26,24 @@
       2. Unique Identifiers: Generators are useful for generating unique IDs. By using a generator function, you can continuously yield new ID values without the need for manual tracking or potential clashes.
       3. Iterators: Generators can be used as iterators, which are objects or functions that provide a sequence of values. You can iterate over these values using the `next()` method to access each value and determine if the iteration is complete.
       4. Converting Arrays to Iterators: Generators simplify the process of converting arrays into iterators. By defining a generator function that yields each element of an array, you can easily iterate over the array's values one at a time.
+
+**4. Promises vs Observables**
+
+  - 💡 Observables are a core component of Angular and offer advantages over promises.
+  - 💡 Observables deliver data over time, while promises deliver data only once.
+  - 💡 Observables can be cancelled, while promises cannot.
+  - 💡 Observables have a wide range of operators for data transformation, while promises lack additional methods.
+  - 💡 Observables are lazy, meaning they are not executed unless subscribed to, while promises are always executed.
+  - 💡 Errors in observables are handled within the subscribe method, while errors in promises are handled within the "then" method.
+  - 💡 Observables can be used for more than just HTTP calls in Angular.
+  - 💡 It is recommended to use observables instead of promises in Angular applications.
+  ![image](https://github.com/Malong11-007/JS-interview-questions/assets/40298510/f75a4b60-8256-412b-983a-0d7b95d277d7)
+
+**5. Promise.all vs Promise.allSettled vs Promise.race vs Promise.any**
+
+  - 💡 **Promise.all** waits for all promises to settle and returns a single promise that resolves with an array of fulfillment values or rejects with the reason of the first rejected promise.
+  - 💡 **Promise.allSettled** waits for all promises to settle and returns a single promise that always fulfills with an array of objects representing the outcome of each promise.
+  - 💡 **Promise.race** returns a promise that resolves or rejects based on the first promise in the iterable that settles.
+  - 💡 **Promise.any** returns a promise that resolves with the value of the first fulfilled promise or rejects with an AggregateError if all promises are rejected.
+  ![image](https://github.com/Malong11-007/JS-interview-questions/assets/40298510/f98964d5-211f-4e88-8a49-15fccc7c6bb3)
+
