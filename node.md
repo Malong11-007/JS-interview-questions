@@ -7,6 +7,8 @@
     
 **2. Explain how nodejs handles async operations?**
     ![image](https://github.com/Malong11-007/JS-interview-questions/assets/40298510/2493a28c-0f6a-49ac-b1da-f484ead37352)
+    ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/cf900d82-3e80-4610-8bd7-050ddb597ad2)
+
 
 **3. What are generators?**
 
@@ -46,4 +48,28 @@
   - 💡 **Promise.race** returns a promise that resolves or rejects based on the first promise in the iterable that settles.
   - 💡 **Promise.any** returns a promise that resolves with the value of the first fulfilled promise or rejects with an AggregateError if all promises are rejected.
   ![image](https://github.com/Malong11-007/JS-interview-questions/assets/40298510/f98964d5-211f-4e88-8a49-15fccc7c6bb3)
+
+**6. What are event emitters?**
+
+  - 💡 Event emitters are mechanisms that facilitate communication between objects by emitting and handling events.
+  - 💡 They are commonly used in event-driven programming and can be implemented using the observer pattern.
+  - 💡 Event emitters decouple the emitter from specific listeners, allowing for modular and flexible system design.
+  - 💡 They are used for handling user interactions, managing asynchronous operations, and enabling pub/sub messaging systems.
+  - 💡 Example: Logger
+    
+**7. Bind vs Apply vs Call**
+  - 💡 In JavaScript, bind, apply, and call are methods that allow you to control the execution context of a function and specify the value of this within the function
+  - 💡 **bind**: Creates a new function with a specified this value, returning a bound function.
+  - 💡 **apply**: Invokes a function with a specified this value and an array of arguments.
+  - 💡 **call**: Invokes a function with a specified this value and individual arguments.
+  ```
+  PolyFill for bind.
+  Function.prototype.myBind = function (obj, ...args) {
+    let func = this;
+    // Accepting arguments passed to newFunc
+    return function (...newArgs) {
+      func.apply(obj, [...args, ...newArgs]);
+    };
+  };
+  ```
 
