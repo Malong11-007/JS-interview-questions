@@ -72,4 +72,11 @@
     };
   };
   ```
+**8. What are symbols?**
 
+  - 💡 JavaScript Symbols were added in ES6 and serve as a **unique** value for identifying object properties.
+  - 💡 Symbols are a primitive datatype and cannot be constructed like objects.
+  - 💡 Symbols can have descriptions but primarily serve debugging purposes.
+  - 💡 Symbols can be used as keys for objects and have a guaranteed unique value.
+  - 💡 Symbols are not included in the for...in loop and are not represented in JSON.stringify.
+  ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/4e34a7ec-40c5-4838-ad1a-6ea2193a0107)
