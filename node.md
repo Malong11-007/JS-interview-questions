@@ -62,8 +62,8 @@
   - 💡 **bind**: Creates a new function with a specified this value, returning a bound function.
   - 💡 **apply**: Invokes a function with a specified this value and an array of arguments.
   - 💡 **call**: Invokes a function with a specified this value and individual arguments.
-  ```
-  PolyFill for bind.
+  ```JS
+  // PolyFill for bind.
   Function.prototype.myBind = function (obj, ...args) {
     let func = this;
     // Accepting arguments passed to newFunc
@@ -71,6 +71,30 @@
       func.apply(obj, [...args, ...newArgs]);
     };
   };
+
+  // Usage
+  let melissa = {
+    name: "Malissa",
+  };
+  
+  let patrick = {
+    name: "patrick",
+  };
+  
+  function printName(...args) {
+    console.log(this.name, ...args);
+  }
+  
+  // Apply => accepts arg as arr
+  printName.apply(melissa, [1, 2, 4]);
+  
+  // Call => Comma-separated args
+  printName.call(melissa, 1, 2, 3);
+  
+  // Bind
+  const printNamePatrick = printName.bind(patrick, 1, 2, 3);
+  printNamePatrick();
+
   ```
 **8. What are symbols?**
 
