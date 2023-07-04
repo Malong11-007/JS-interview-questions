@@ -79,4 +79,16 @@
   - 💡 Symbols can have descriptions but primarily serve debugging purposes.
   - 💡 Symbols can be used as keys for objects and have a guaranteed unique value.
   - 💡 Symbols are not included in the for...in loop and are not represented in JSON.stringify.
+  - 💡 The Symbol.iterator property is used to check if an object has an iterator.
   ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/4e34a7ec-40c5-4838-ad1a-6ea2193a0107)
+
+**9. Enumberable vs Iterable**
+  
+  - 💡 Iterable: An iterable is an object that can be iterated over using a loop. It has a built-in method called Symbol.iterator that returns an iterator object. Examples of built-in iterables in JavaScript include arrays, strings, maps, sets, and generators.
+  - 💡 Enumerable: Enumerable properties in JavaScript are the properties of an object that can be iterated over using the for...in loop construct. By default, properties added to an object using dot notation or square bracket notation are enumerable. You can control the enumerability of properties using methods like Object.defineProperty() or the enumerable property descriptor.
+  - 💡 So, in simpler terms, an iterable is an object that you can loop over, like an array or a string. Enumerable properties are the properties of an object that you can iterate over using a for...in loop.
+  - 💡 Only in JS, Iterable -> values, enumerable -> properties / keys
+  - 💡 Tip to remember
+      - for..in..keys === foreign keys === use for...in for keys;
+      - for...of for values.
+      - **in** gives you index.
