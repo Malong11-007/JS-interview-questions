@@ -189,5 +189,8 @@ let daphne = { id: 456, gender: 'female' };
 let velma = { id: 789, gender: 'female' };
 
 theGang.set(fred, 'blue');
-theGang
+```
+**15. null vs Undefined**
 
+  - 💡 Null in JavaScript means an empty value and is also a primitive type in JavaScript. The variable which has been assigned as null contains no value.
+  - 💡 Undefined, on the other hand, means the variable has been declared, but its value has not been assigned.
