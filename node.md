@@ -222,3 +222,12 @@ theGang.set(fred, 'blue');
   console.log(x); // Output: ReferenceError: x is not defined
   let x = 10;
 ```
+**16. What is prototype?**
+
+  - 💡 Prototypes are the mechanism by which JavaScript objects inherit features from one another
+  - 💡 It allows sharing properties and methods among multiple instances.
+  - 💡 The prototype object is shared among instances created with the same constructor function.
+  - 💡 Properties and methods defined on the prototype are accessible to instances.
+  - 💡 Modifying the prototype affects all instances and future instances.
+  - 💡 Prototypal inheritance allows objects to inherit from their prototype chain.
+  ![Screenshot from 2023-07-05 17-37-11](https://github.com/Malong11-007/javascript-iq/assets/40298510/225151b7-b5b1-4445-bfda-96900ac76a27)
