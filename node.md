@@ -231,3 +231,17 @@ theGang.set(fred, 'blue');
   - 💡 Modifying the prototype affects all instances and future instances.
   - 💡 Prototypal inheritance allows objects to inherit from their prototype chain.
   ![Screenshot from 2023-07-05 17-37-11](https://github.com/Malong11-007/javascript-iq/assets/40298510/225151b7-b5b1-4445-bfda-96900ac76a27)
+
+**17. Arrow function vs Normal function**
+
+  - 💡 Arrow Functions:
+    - Have a concise syntax using the arrow (=>) operator.
+    - Inherit the "this" value from the surrounding scope.
+    - Do not have their own "this" context.
+    - Do not have the "arguments" object (the "arguments" keyword refers to the arguments of the surrounding scope).
+    - Cannot be used as constructors with the "new" keyword.
+  - 💡 Normal Functions:
+    - Use the "function" keyword for declaration.
+    - Have their own "this" context, which can be influenced by how they are invoked.
+    - Have their own "arguments" object that contains all passed arguments, even those not defined in the parameter list.
+    - Can be used as constructors with the "new" keyword to create new instances of objects.
