@@ -132,3 +132,7 @@
   - 🔑 Objects created with Object.create inherit properties from their prototypes.
   - 📝 Property descriptors can be used to define properties for the created objects.
   ![Screenshot from 2023-07-05 13-46-35](https://github.com/Malong11-007/javascript-iq/assets/40298510/7c7c460d-effb-4c52-a1dd-890f76ab9e46)
+
+**12. Object.assign vs Object.defineProperties**
+  - 💡 Object.assign is used to copy the values of properties from source objects to a target object.
+  - 💡 Object.defineProperties is used to define or modify multiple properties on an object with explicit property descriptors.
