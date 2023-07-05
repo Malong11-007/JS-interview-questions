@@ -125,3 +125,10 @@
   - 💡 Property descriptors cannot be changed using seal or freeze, but it's possible with prevent extensions.
   - 💡 Reassigning the prototype of an object is not allowed after calling any of the three methods seal, freeze, or prevent extensions.
   ![Screenshot from 2023-07-05 13-20-06](https://github.com/Malong11-007/javascript-iq/assets/40298510/1400e21a-f3a4-4243-862a-d10fe31b5da2)
+
+**11. What Object.create does?**
+  
+  - 🔄 Object.create is used to create a new object and set its prototype.
+  - 🔑 Objects created with Object.create inherit properties from their prototypes.
+  - 📝 Property descriptors can be used to define properties for the created objects.
+  ![Screenshot from 2023-07-05 13-46-35](https://github.com/Malong11-007/javascript-iq/assets/40298510/7c7c460d-effb-4c52-a1dd-890f76ab9e46)
