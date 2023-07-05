@@ -194,3 +194,31 @@ theGang.set(fred, 'blue');
 
   - 💡 Null in JavaScript means an empty value and is also a primitive type in JavaScript. The variable which has been assigned as null contains no value.
   - 💡 Undefined, on the other hand, means the variable has been declared, but its value has not been assigned.
+
+**16. What is Hoisting?**
+  - 💡 Hoisting is assigning the memory to variables and functions even before initialising them.
+  - 💡 Also explain it as, Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+  - 💡 `const` and `let` have the memory and placeholder Undefined. which means they are also hoisted. But if you try to access them before initialization it will throw regerence error.
+      - `Uncaught ReferenceError: Cannot access ‘__variable__’ before initialization`
+  - 💡 The `Temporal Dead Zone` (TDZ) is a behavior in JavaScript that occurs with variables declared using let and const. It is the period between the start of a block scope and the actual declaration of a variable within that scope.
+```javascript
+  // Var
+  console.log(x); // Output: undefined
+  var x = 10;
+  console.log(x); // Output: 10
+  
+  // function
+  foo(); // Output: "Hello, World!"
+  function foo() {
+    console.log("Hello, World!");
+  }
+  
+  // function expression
+  foo(); // Output: TypeError: foo is not a function
+  var foo = function () {
+    console.log("Hello, World!");
+  };
+  // let / const
+  console.log(x); // Output: ReferenceError: x is not defined
+  let x = 10;
+```
