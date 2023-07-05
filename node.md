@@ -116,3 +116,12 @@
       - for..in..keys === foreign keys === use for...in for keys;
       - for...of for values.
       - **in** gives you index.
+   
+**10. Seal vs Freeze vs preventExtensions**
+
+  - 💡 Calling seal, freeze, or prevent extensions prevents the addition of new properties to an object.
+  - 💡 Seal and prevent extensions allow changing the value of existing properties, but freeze does not.
+  - 💡 Seal and freeze prevent deleting properties, but prevent extensions allows it.
+  - 💡 Property descriptors cannot be changed using seal or freeze, but it's possible with prevent extensions.
+  - 💡 Reassigning the prototype of an object is not allowed after calling any of the three methods seal, freeze, or prevent extensions.
+  ![Screenshot from 2023-07-05 13-20-06](https://github.com/Malong11-007/javascript-iq/assets/40298510/1400e21a-f3a4-4243-862a-d10fe31b5da2)
