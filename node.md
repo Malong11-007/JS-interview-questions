@@ -136,3 +136,58 @@
 **12. Object.assign vs Object.defineProperties**
   - 💡 Object.assign is used to copy the values of properties from source objects to a target object.
   - 💡 Object.defineProperties is used to define or modify multiple properties on an object with explicit property descriptors.
+
+**13. What is strong referencing and reachability?**
+  
+  - 💡 Strong references and reachability are concepts related to memory management in programming languages. They determine whether an object or value is still accessible and eligible for garbage collection.
+  - 💡 In JavaScript, when an object is assigned to a variable or added to a data structure like an array or a map, a strong reference is created. A strong reference means that the object is strongly reachable, and as long as there is at least one strong reference to the object, it will remain in memory and won't be garbage collected.
+```javascript
+// Credit: https://gist.github.com/prof3ssorSt3v3/602b498ad96d14cad9e9495359019c30
+const log = console.log;
+
+// Strong Ref and Reachability - the default state
+let person = { id: 123, name: 'Shaggy' };
+let list = [person];
+person = null; // destroys one reference
+
+// person and list[0] were referring to the same object initially
+// After setting person to null, only the reference in list remains
+// The object { id: 123, name: 'Shaggy' } is still reachable through list[0]
+```
+
+**14. WeakMap / WeakSet**
+  - 💡 A `WeakSet` is a built-in JavaScript data structure that allows storing a collection of weak references to objects.
+  - 💡 The objects stored in a `WeakSet` must be objects, and they are held as weak references, which means they don't prevent the object from being garbage collected.
+  - 💡 Here's an example of using a `WeakSet`:
+```javascript
+let kids = new WeakSet();
+let son = { name: 'Alex' };
+let daughter = { name: 'Bree' };
+
+kids.add(son);
+kids.add(daughter);
+
+// Check if the WeakSet contains certain objects
+log('has son', kids.has(son));           // true
+log('has daughter', kids.has(daughter)); // true
+
+son = null;
+
+// After setting `son` to `null`, the object is no longer strongly reachable
+// The weak reference in the `kids` WeakSet won't prevent garbage collection
+
+log('has son', kids.has(son));           // false
+log('has daughter', kids.has(daughter)); // true
+```
+  - 💡 A `WeakMap` is a built-in JavaScript data structure that allows storing a collection of key-value pairs, where the keys must be objects.
+  - 💡 The objects stored as keys in a `WeakMap` are held as weak references.
+  - 💡 Here's an example of using a `WeakMap`:
+```javascript
+let theGang = new WeakMap();
+let fred = { id: 123, gender: 'male' };
+let daphne = { id: 456, gender: 'female' };
+let velma = { id: 789, gender: 'female' };
+
+theGang.set(fred, 'blue');
+theGang
+
