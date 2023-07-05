@@ -9,6 +9,41 @@
     ![image](https://github.com/Malong11-007/JS-interview-questions/assets/40298510/2493a28c-0f6a-49ac-b1da-f484ead37352)
     ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/cf900d82-3e80-4610-8bd7-050ddb597ad2)
 
+**2.1. Event loop behaviour in ESM vs CJS**
+
+  - 💡 In an ESM environment, such as Node.js with ESM support or modern browsers with native ESM support, the script is typically interpreted as an ECMAScript Module. In ESM, the script runs in a global async context, and the event loop operates differently compared to CJS.
+  - 💡 In ESM, when you use Promise.resolve() or other microtasks, they are queued in the microtask queue. Microtasks have higher priority than regular tasks, and they are executed immediately after the current task is finished, before the event loop moves to the next phase. This means that microtasks are executed before the next event loop cycle starts. So, if you're running an ESM script and queue a microtask like Promise.resolve(), it will be executed right away because the event loop is still in the microtask phase. This behavior can lead to differences in execution order compared to CJS, where microtasks are not present.
+  - 💡 It's important to consider the context and the specific environment in which the code is running to understand the nuances of event loop execution and the differences between ESM and CJS.
+  
+```javascript
+console.log(typeof module) // if it return object then its CJS otherwise ESM.
+process.nextTick(() => {
+  console.log("nextTick");
+});
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
+Promise.resolve(true).then(() => {
+  console.log("promise");
+});
+console.log("Last");
+
+// Outputs CJS
+    // Object
+    // Last
+    // nextTick
+    // promise
+    // setTimeout
+
+// Output ESM
+    // undefined
+    // Last
+    // promise
+    // nextTick
+    // setTimeout
+
+```
+
 
 **3. What are generators?**
 
