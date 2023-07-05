@@ -280,3 +280,7 @@ theGang.set(fred, 'blue');
     - Have their own "this" context, which can be influenced by how they are invoked.
     - Have their own "arguments" object that contains all passed arguments, even those not defined in the parameter list.
     - Can be used as constructors with the "new" keyword to create new instances of objects.
+   
+**18. Explain closures**
+  - 💡 A closure is an inner function that remembers and has access to variables in the local scope in which it was created even after the outer function has finished executing
+  - 💡 Use cases: Callback functions, Data privacy, React hook utilize closures, Caching / Memoization, Curring / partial application.
