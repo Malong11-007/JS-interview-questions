@@ -284,3 +284,23 @@ theGang.set(fred, 'blue');
 **18. Explain closures**
   - 💡 A closure is an inner function that remembers and has access to variables in the local scope in which it was created even after the outer function has finished executing
   - 💡 Use cases: Callback functions, Data privacy, React hook utilize closures, Caching / Memoization, Curring / partial application.
+
+**19. Programming Paradigms**
+
+  - 💡 Imperative Programming: Programs are written as a series of instructions that explicitly state how to perform computations.
+    - Focuses on changing program state through statements and control flow.
+    - Uses mutable variables to store and modify data.
+    - Relies on loops and conditional statements for control flow.
+    - Example: C++, Java
+  
+  - 💡 Declarative Programming: Programs focus on describing what should be computed rather than how.
+    - Expresses relationships and dependencies using declarations and expressions.
+    - Does not emphasize explicit control flow.
+    - Types of declarative paradigms include:
+      - Functional Programming (FP): Programs are composed of pure functions. Function are first-class citizens. Avoid side effects, such as modifying external state or relying on global variables.
+        - Example: Haskell, Lisp, Clojure
+      - Logic Programming: Programs use rules and facts to express relationships.
+        - Example: SQL, Prolog, Datalog
+          
+    ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/a5c3f4e1-1cbe-403c-b201-00d091862c4b)
+
