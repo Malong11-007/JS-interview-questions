@@ -285,7 +285,34 @@ theGang.set(fred, 'blue');
   - 💡 A closure is an inner function that remembers and has access to variables in the local scope in which it was created even after the outer function has finished executing
   - 💡 Use cases: Callback functions, Data privacy, React hook utilize closures, Caching / Memoization, Curring / partial application.
 
-**19. Programming Paradigms**
+**19. What is Currying?**
+  - 💡 Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, each taking a single argument. Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function
+  - 💡 JavaScript provides native support for currying through closures and function binding.
+  - 💡 Currying and function composition are both techniques used in functional programming, but they serve different purposes.
+    - Currying transforms a function with multiple arguments into a sequence of functions, each taking only one argument. It helps create reusable function transformations.
+    - On the other hand, function composition is a way of combining multiple functions into a single function, where the output of one function becomes the input of the next function.
+```javascript
+function curry(fn) {
+    return function curried(...args) {
+        console.log(fn.length, args.length);
+        if (fn.length !== args.length && args.length < fn.length) {
+            return curried.bind(null, ...args);
+        } 
+        return fn(...args);
+    }
+}
+
+function add(a, b, c) {
+    return a + b + c;
+}
+
+const curriedAdd = curry(add);
+console.log(curriedAdd(1)(3)(5));
+console.log(curriedAdd(1)(3, 5));
+  
+```
+  
+**20. Programming Paradigms**
 
   - 💡 Imperative Programming: Programs are written as a series of instructions that explicitly state how to perform computations.
     - Focuses on changing program state through statements and control flow.
@@ -304,3 +331,11 @@ theGang.set(fred, 'blue');
           
     ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/a5c3f4e1-1cbe-403c-b201-00d091862c4b)
 
+**21. SSR vs SSG vs ISR vs CSR**
+
+  - 💡 Static Site Generation (SSG) Pages are pre-rendered and served as static HTML. The content is the same for every request.
+  - Server-side generation (SSG) combines server-side rendering with storing the generated HTML file on a CDN for faster response times and reduced server load.
+  - 💡 Client-Side Rendering (CSR) Data is loaded and rendered on the client side using React code. The initial render may not include dynamic data, which is loaded later.
+  - 💡 Server-Side Rendering (SSR) Data is loaded on the server and passed as props to the component. The server renders the complete HTML, but there may be additional API requests for each page request.
+  - 💡 Incremental Static Regeneration (ISR) Similar to SSR, but with caching. The server renders the HTML and caches it for a specific duration. Within that duration, subsequent requests return the cached HTML without making API requests.
+  ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/1c36688b-ff05-4dc1-938f-902db5c929d5)
