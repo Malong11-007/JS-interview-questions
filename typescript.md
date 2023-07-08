@@ -66,6 +66,7 @@
   - 📌 **Any** (I don't care) type disables type checking and should be used sparingly, mostly when porting JavaScript code to TypeScript.
   - 📌 **Unknown** (I don't know yet) type provides type checking for all possible values, allowing narrowing down to specific types through conditional checks.
   - 📌 "Never" type represents an empty set and is often encountered in complex type building or exhaustive switch statements.
+  - https://ivov.dev/notes/typescript-and-set-theory
 
 **Tips**
 
