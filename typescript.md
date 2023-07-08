@@ -68,6 +68,10 @@
   - 📌 "Never" type represents an empty set and is often encountered in complex type building or exhaustive switch statements.
   - https://ivov.dev/notes/typescript-and-set-theory
 
+**7. Explain the use of declare**
+
+  - The declare keyword in TypeScript is used for the Ambient declaration of variables or for methods. Ambient Declarations is like an import keyword. Which tells the compiler that the source exists in another file
+
 **Tips**
 
   - Normal TS utility types like Omit and Pick will not work with Unions. So you need to write your own version of these utils that look like this.
