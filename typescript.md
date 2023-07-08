@@ -71,6 +71,18 @@
 **7. Explain the use of declare**
 
   - The declare keyword in TypeScript is used for the Ambient declaration of variables or for methods. Ambient Declarations is like an import keyword. Which tells the compiler that the source exists in another file
+  - NOT CLEAR YET :(
+
+**8. Static vs Dyanamic Typed language**
+    
+  - 📝 Static languages have fixed typing and do not allow changing the type of a variable.
+  - 📝 Dynamic languages allow variable types to be changed and offer flexibility.
+  - 📝 Static languages provide compile-time checks, making the code more robust.
+  - 📝 Dynamic languages lack compile-time checks and may be slower.
+  - 📝 Dynamic languages like JavaScript are recommended for beginners and smaller-scale applications.
+  - 📝 Static languages are more suitable for large-scale applications and scenarios requiring specific interfaces and APIs.
+  - 💨 Dynamic languages like JavaScript perform compilation on the runtime, leading to potential slowdowns due to runtime checks.
+  - 💪 Static languages like C++ restrict data types upfront, resulting in simpler and more efficient code.
 
 **Tips**
 
