@@ -114,3 +114,11 @@
     setCount(50);
     console.log(count()); // 50
     ```
+**Mistakes**
+
+  - 💡 Mistake 1 Not understanding the difference between the **unknown** and **any** types. The unknown type allows developers to indicate that they don't know the current type of a variable but will know it later when they use it. In contrast, the any type completely removes type checks and should be avoided.
+  - 💡 Mistake 2 Not utilizing type guards and the **is** operator for type inference. Type guards help determine the specific type of an object, allowing better code organization and improved developer experience.
+  - 💡 Mistake 3 Using number-based enums without specifying values. This can lead to less reliable code. Instead, it's recommended to use string-based enums or declare a type with string literals.
+  - 💡 Mistake 4 Neglecting to use built-in predefined utility types. TypeScript provides utility types like partial, omit, and record, which can greatly simplify code and improve type safety. Partial makes all properties of an interface optional, omit removes specified properties, and record defines a specific set of keys and their corresponding value types.
+
+    
