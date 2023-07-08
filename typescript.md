@@ -61,6 +61,12 @@
   - 🏷️ Simulating opaque types in TypeScript involves using type intersections and controlled type assertions.
   - 🏷️ Example: https://github.com/basarat/demo-typescript-opaque-types
 
+**6. Unknown vs any vs never**
+  
+  - 📌 **Any** (I don't care) type disables type checking and should be used sparingly, mostly when porting JavaScript code to TypeScript.
+  - 📌 **Unknown** (I don't know yet) type provides type checking for all possible values, allowing narrowing down to specific types through conditional checks.
+  - 📌 "Never" type represents an empty set and is often encountered in complex type building or exhaustive switch statements.
+
 **Tips**
 
   - Normal TS utility types like Omit and Pick will not work with Unions. So you need to write your own version of these utils that look like this.
