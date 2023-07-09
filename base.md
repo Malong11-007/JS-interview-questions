@@ -386,3 +386,6 @@ console.log(curriedAdd(1)(3, 5));
   - 💡 Babel is a popular JavaScript compiler that handles transpilation and polyfilling.
   - 💡 Webpack bundles JavaScript code into a single file, simplifying its integration into HTML.
   - 💡 SWC (Speedy Web Compiler) is a faster alternative to Babel, written in Rust, that can perform code compilation and bundling.
+  - 💡 https://www.youtube.com/watch?v=QliwSwWHJoQ
+  ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/89876c99-fb1e-4c98-8904-c6671dd3f2f4)
+
