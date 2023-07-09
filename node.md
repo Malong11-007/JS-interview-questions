@@ -339,3 +339,41 @@ console.log(curriedAdd(1)(3, 5));
   - 💡 Server-Side Rendering (SSR) Data is loaded on the server and passed as props to the component. The server renders the complete HTML, but there may be additional API requests for each page request.
   - 💡 Incremental Static Regeneration (ISR) Similar to SSR, but with caching. The server renders the HTML and caches it for a specific duration. Within that duration, subsequent requests return the cached HTML without making API requests.
   ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/1c36688b-ff05-4dc1-938f-902db5c929d5)
+
+**22. Javascript module system - commonjs vs esm**
+
+  - 💡 CommonJS (CJS):
+    - Originally designed for server-side JavaScript environments.
+    - Synchronous module system where dependencies are loaded using the `require` function.
+    - Commonly used in older Node.js versions and server-side JavaScript frameworks.
+    - Not natively supported in web browsers without bundlers or module loaders.
+      ```js
+      // greet.js
+      const greet = (name) => {
+      console.log(`Hello, ${name}!`);
+      };
+      module.exports = greet;
+      ------------------------------------------
+  
+      // index.js
+      const greet = require('./greet');
+      greet('John'); // Output: Hello, John!
+      ```
+  
+  - 💡 ECMAScript Modules (ESM):
+    - JavaScript's official module system introduced with ECMAScript 6 (ES6).
+    - Asynchronous module system where dependencies are handled with `import` and `export` statements.
+    - Commonly used in modern JavaScript environments, bundlers (like Webpack), module loaders (like SystemJS), and browsers that support ESM.
+    - Preferred choice for web-based projects and newer Node.js versions.
+      ```js
+      // greet.js
+      const greet = (name) => {
+      console.log(`Hello, ${name}!`);
+      };
+      export default greet;
+      ------------------------------------------
+      // index.js
+      import greet from './greet.js';
+      greet('John'); // Output: Hello, John!
+      ```
+  
