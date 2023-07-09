@@ -68,10 +68,43 @@
   - 📌 "Never" type represents an empty set and is often encountered in complex type building or exhaustive switch statements.
   - https://ivov.dev/notes/typescript-and-set-theory
 
-**7. Explain the use of declare**
+**7. Declaration files (*.d.ts) / module vs namespace**
 
-  - The declare keyword in TypeScript is used for the Ambient declaration of variables or for methods. Ambient Declarations is like an import keyword. Which tells the compiler that the source exists in another file
-  - NOT CLEAR YET :(
+  - 📝 Declaration files (`.d.ts`) in TypeScript provide type information for JavaScript libraries or code without native TypeScript support. They enable TypeScript to understand and provide type checking, autocompletion, and type inference for external JavaScript code. 
+  - 📝 Declaration files are typically created by library authors or the TypeScript community.
+  - 📝 If you're already using TypeScript for your modules, you may not need to create separate declaration files for your own code. TypeScript can infer types from TypeScript source files (.ts) automatically.
+  - 📝 Declaration files are primarily used when working with external JavaScript libraries or sharing TypeScript types/interfaces.
+  - 📝 Namespaces are used to group related entities under a common namespace, preventing naming collisions. They are defined with the `namespace` keyword.
+  - 📝 Modules provide a more modern and recommended approach for organizing and sharing code. They use the `module` or `namespace` keywords (deprecated) and follow a file-based structure.
+  - 📝 Declaration files can be referenced using the Triple-Slash Directive syntax (`/// <reference path="path/to/declaration.d.ts" />`) in older projects. In modern projects, module imports (`import`) are preferred.
+  - 📝 Declaration files allow you to define types, interfaces, classes, enums, and functions that are accessible globally or within specific modules.
+  - 📝 When using `declare module`, the types and functions defined within the module become part of the global namespace and can be used without an import statement.
+  - 📝 When using a declaration file written as a module declaration (`declare module "module-name" { ... }`), you can import types and functions using ES module syntax (`import { ... } from "module-name"`).
+  Here's a code snippet to illustrate the usage:
+    ```typescript
+    // Declaration file (`myTypes.d.ts`):
+    declare module "myTypes" {
+      interface Person {
+        name: string;
+        age: number;
+      }
+    
+      function greet(person: Person): void;
+    }
+    ```
+    
+    
+    ```typescript
+    // Using the declaration file:
+    import { Person, greet } from "myTypes";
+    
+    const person: Person = {
+      name: "John",
+      age: 30,
+    };
+    
+    greet(person);
+    ```
 
 **8. Static vs Dyanamic Typed language**
     
@@ -97,23 +130,7 @@
       type Foo = PropertyKey;
       //     ^? string | number | symbol`
       ```
-  - Basic react useState implementation
-    ```ts
-    // simple react useState hook example
-    // Concepts: Closures, Generic, Type annotation, optional params etc
-    const useState = <T>(
-      initial?: T
-    ): [() => T | undefined, (newValue: T) => void] => {
-      const _initialVal = initial;
-      let state = initial;
-      return [() => state, (newValue: T) => (state = newValue)];
-    };
-    
-    const [count, setCount] = useState<number>(10);
-    console.log(count()); // 10
-    setCount(50);
-    console.log(count()); // 50
-    ```
+      
 **Mistakes**
 
   - 💡 Mistake 1 Not understanding the difference between the **unknown** and **any** types. The unknown type allows developers to indicate that they don't know the current type of a variable but will know it later when they use it. In contrast, the any type completely removes type checks and should be avoided.
