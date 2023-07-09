@@ -377,3 +377,12 @@ console.log(curriedAdd(1)(3, 5));
       greet('John'); // Output: Hello, John!
       ```
   
+**23. Modern JS development **
+
+  - 💡 JavaScript changes rapidly with new features and syntax, making it challenging to keep up with browser implementations.
+  - 💡 Different JavaScript engines (e.g., V8, SpiderMonkey, JavascriptCore - bun.js) may not fully support the ECMAScript standard, causing compatibility issues across browsers.
+  - 💡 Polyfills and feature detection help address compatibility issues by providing missing features or alternative code implementations.
+  - 💡 Transpiling code to a specific JavaScript version, such as ECMAScript 2015, ensures compatibility across targeted browsers.
+  - 💡 Babel is a popular JavaScript compiler that handles transpilation and polyfilling.
+  - 💡 Webpack bundles JavaScript code into a single file, simplifying its integration into HTML.
+  - 💡 SWC (Speedy Web Compiler) is a faster alternative to Babel, written in Rust, that can perform code compilation and bundling.
