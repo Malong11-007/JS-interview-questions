@@ -107,15 +107,14 @@
     ```
 
 **8. Static vs Dyanamic Typed language**
-    
+
+  - 💡 Static typing checks types before running the program (compile time), while dynamic typing checks types during program execution (runtime).
   - 📝 Static languages have fixed typing and do not allow changing the type of a variable.
   - 📝 Dynamic languages allow variable types to be changed and offer flexibility.
-  - 📝 Static languages provide compile-time checks, making the code more robust.
-  - 📝 Dynamic languages lack compile-time checks and may be slower.
-  - 📝 Dynamic languages like JavaScript are recommended for beginners and smaller-scale applications.
-  - 📝 Static languages are more suitable for large-scale applications and scenarios requiring specific interfaces and APIs.
-  - 💨 Dynamic languages like JavaScript perform compilation on the runtime, leading to potential slowdowns due to runtime checks.
   - 💪 Static languages like C++ restrict data types upfront, resulting in simpler and more efficient code.
+  - 💡 Weak typing in JavaScript allows implicit type conversions, which can lead to unexpected results.
+  - 💡 Strong typing involves stricter type checking and does not allow implicit conversions. ( Python php )
+  - 💡 Implicit type conversions can make code less understandable and more prone to mistakes.
 
 **Tips**
 
