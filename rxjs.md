@@ -17,6 +17,15 @@
 **6. What is Back-Pressure in Reactive Programming?**
     
   - Back-pressure in reactive programming refers to the mechanism of controlling the flow of data when the producer emits data faster than the consumer can process it, preventing overwhelming the system.
+  - These mechanisms can come in either the form of lossy or loss-less operations, each of which depends on the requirements.
+  - For example, if you miss a few mouse movements, it may not be a problem, however, if you miss a few bank transactions, that could definitely be a problem.
+  - Lossy Backpressure
+      - **Debounce**: Emits the most recent value from the source Observable after a specified duration of silence.
+      - **Throttle**: Emits the first value from the source Observable and then ignores subsequent values for a specified duration.
+      - **AuditTime**: Emits the most recent value from the source Observable at regular intervals defined by the duration.
+  - Loss-less Backpressure
+      - **Buffer / bufferWithTimeOrCount**: This allows the consumer to set either the number of items they wish to wait for at a time, or a particular timespan, or both, whichever comes first
+  - https://codeburst.io/a-look-at-back-pressure-and-its-handling-in-rxjs-5bc8f04a2e8f
 
 **7. What is an Observable?**
     
