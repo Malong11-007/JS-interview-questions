@@ -155,10 +155,6 @@
         */
         ```    
 
-**13. What are different types of Subjects?**
-    
-  - The different types of Subjects in RxJS include BehaviorSubject, ReplaySubject, and AsyncSubject, each with specific characteristics for handling values and subscriptions.
-
 **14. What are Schedulers?**
     
   - Schedulers in RxJS provide control over the execution and concurrency of Observables, allowing tasks to be scheduled and executed on different threads or time intervals.
