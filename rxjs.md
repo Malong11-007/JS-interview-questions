@@ -52,7 +52,108 @@
 
 **12. What is a Subject?**
     
-  - A Subject is a special type of Observable that can act as both an Observable and an Observer, allowing values to be multicast to multiple subscribers.
+  - A Subject is a special type of Observable that can act as both an Observable and an Observer, Allowing values to be multicast to multiple subscribers.
+  - Types of subject 
+      - Subject: It allows multicasting and acts as both an observable and an observer.
+        ```typescript
+        // Subject example
+        const subject = new Subject<number>();
+        
+        subject.subscribe((value) => {
+          console.log(`Subscriber A: ${value}`);
+        });
+        
+        subject.subscribe((value) => {
+          console.log(`Subscriber B: ${value}`);
+        });
+        
+        subject.next(1);
+        subject.next(2);
+        
+        /*
+        Output:
+        Subscriber A: 1
+        Subscriber B: 1
+        Subscriber A: 2
+        Subscriber B: 2
+        */
+        ```
+      - BehaviorSubject: It is a variant of Subject that stores the latest value and emits it immediately to new subscribers. It requires an initial value and always emits the most recent value to subscribers.
+        ```typescript
+        // BehaviorSubject example
+        const behaviorSubject = new BehaviorSubject<number>(0);
+        
+        behaviorSubject.subscribe((value) => {
+          console.log(`Subscriber A: ${value}`);
+        });
+        
+        behaviorSubject.next(1);
+        
+        behaviorSubject.subscribe((value) => {
+          console.log(`Subscriber B: ${value}`);
+        });
+        
+        behaviorSubject.next(2);
+        
+        /*
+        Output:
+        Subscriber A: 0
+        Subscriber A: 1
+        Subscriber B: 1
+        Subscriber A: 2
+        Subscriber B: 2
+        */
+        ```
+      - ReplaySubject: It is a variant of Subject that buffers a specific number of values and replays them to new subscribers. It maintains a buffer of values, and new subscribers receive values from that buffer.
+         ```typescript
+        // ReplaySubject example
+        const replaySubject = new ReplaySubject<number>(2);
+        
+        replaySubject.subscribe((value) => {
+          console.log(`Subscriber A: ${value}`);
+        });
+        
+        replaySubject.next(1);
+        replaySubject.next(2);
+        replaySubject.next(3);
+        
+        replaySubject.subscribe((value) => {
+          console.log(`Subscriber B: ${value}`);
+        });
+        
+        /*
+        Output:
+        Subscriber A: 1
+        Subscriber A: 2
+        Subscriber A: 3
+        Subscriber B: 2
+        Subscriber B: 3
+        */
+        ```
+      - AsyncSubject: It is a variant of Subject that only emits the last value it receives and only when the complete() method is called. It emits the value to subscribers only when the source observable completes.
+        ```typescript
+        // AsyncSubject example
+        const asyncSubject = new AsyncSubject<number>();
+        
+        asyncSubject.subscribe((value) => {
+          console.log(`Subscriber A: ${value}`);
+        });
+        
+        asyncSubject.next(1);
+        asyncSubject.next(2);
+        asyncSubject.next(3);
+        asyncSubject.complete();
+        
+        asyncSubject.subscribe((value) => {
+          console.log(`Subscriber B: ${value}`);
+        });
+        
+        /*
+        Output:
+        Subscriber A: 3
+        Subscriber B: 3
+        */
+        ```    
 
 **13. What are different types of Subjects?**
     
