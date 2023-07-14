@@ -395,3 +395,6 @@
   result.subscribe(value => console.log(value));
   // Output: A, B, C
   ```
+Useful Links:
+- https://thinkrx.io/rxjs/
+- https://rxjs.dev/
