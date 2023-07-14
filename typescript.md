@@ -138,3 +138,4 @@
   - 💡 Mistake 4 Neglecting to use built-in predefined utility types. TypeScript provides utility types like partial, omit, and record, which can greatly simplify code and improve type safety. Partial makes all properties of an interface optional, omit removes specified properties, and record defines a specific set of keys and their corresponding value types.
 
     
+![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/44bef2af-b974-4a03-9c97-75271668a6fd)
