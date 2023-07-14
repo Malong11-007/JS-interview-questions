@@ -1,5 +1,6 @@
 # Angular
- 
+
+ **What are the pros and cons of angular?**
   | Pros                                         | Cons                                                    |
   | -------------------------------------------- | ------------------------------------------------------- |
   | **Powerful framework:** Angular is a full-featured framework with a robust set of tools and features, making it suitable for building complex applications. | **Learning curve:** Angular has a steep learning curve compared to other JavaScript frameworks, primarily due to its extensive feature set and complex concepts. |
@@ -12,6 +13,7 @@
 
 ---
 
+**Explain difference between SPA and MPA**
   |                      | SPA (Single-Page Application) | MPA (Multi-Page Application) |
   |----------------------|-------------------------------|------------------------------|
   | **Architecture**     | Operates within a single HTML page | Each page is a separate HTML document |
@@ -23,6 +25,7 @@
 
   ---
 
+**Compare Angular against famous frameworks.**
   | **Comparison Criteria**     | **Angular**                                                  | **React**                                                           | **Vue.js**                                                     |
   | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------------------- |
   | **Learning Curve**         | Steeper learning curve due to its extensive feature set.      | Relatively easier to learn and get started.                         | Easier to learn, especially for beginners.                      |
@@ -36,3 +39,11 @@
   | **Tooling and Ecosystem**   | Angular provides a comprehensive CLI and a wide range of tools. | React has a robust ecosystem with various third-party tools and libraries. | Vue.js offers a versatile CLI and a growing ecosystem.         |
   | **Mobile App Development**  | Angular supports cross-platform mobile app development with frameworks like Ionic and NativeScript. | React Native enables building native mobile apps using React.      | Vue Native allows building native mobile apps using Vue.js.   |
   | **Famous Companies/Projects** | Google, Microsoft, IBM, General Electric                        | Facebook, Instagram, Netflix, Airbnb                                 | Alibaba                                                        |
+
+---
+
+**How angular works?**
+![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/10b6cee2-6383-4b5d-9b34-74b113a535c9)
+![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/15dff29f-f888-4ae0-8059-4ea7ad28b2ef)
+
+
