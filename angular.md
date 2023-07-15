@@ -42,6 +42,12 @@
 
 ---
 
+**How angular works?**
+![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/10b6cee2-6383-4b5d-9b34-74b113a535c9)
+![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/15dff29f-f888-4ae0-8059-4ea7ad28b2ef)
+
+---
+
 **Different Ways to share data between Components** https://github.com/Malong11-007/angular-data-sharing
   1. Input/Output Binding:
      - Use `@Input` and `@Output` decorators to establish a parent-child relationship between components.
@@ -98,8 +104,25 @@
 
 ---
 
-**How angular works?**
-![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/10b6cee2-6383-4b5d-9b34-74b113a535c9)
-![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/15dff29f-f888-4ae0-8059-4ea7ad28b2ef)
+**Explain angular services**
+
+  - Services are a way to organize and share code and data among different components. Services are typically used to encapsulate business logic, data retrieval, or communication with external APIs.
+  - The @Injectable() decorator in Angular is used to mark a class as injectable. following properties can be used to configure the injectable.
+    - **providedIn**: Specifies the module or injector where the service should be provided. It accepts values such as 'root' (provided globally), 'platform' (provided at the platform level), or a specific module name.
+    - **useClass**: Specifies a class to use as an alternative implementation for the service. This is useful for providing different implementations for an interface or extending an existing service.
+    - **useValue**: Specifies a value to use as the implementation for the service. This is useful when you want to provide a simple value instead of a class instance.
+    - **useFactory**: Specifies a factory function that should be used to create the service instance. This allows for more advanced control over the instantiation process, such as creating a service with custom configuration. 
+    ```typescript
+    // my.service.ts
+    import { Injectable } from '@angular/core';
+    
+    @Injectable()
+    export class MyService {
+      private data: string;
+      constructor() { this.data = 'Hello, World!'; }
+      getData(): string { return this.data; }
+      setData(newData: string): void { this.data = newData; }
+    }
+    ```
 
 
