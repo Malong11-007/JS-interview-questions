@@ -91,7 +91,7 @@
        <button (click)="handleClick()">Click me!</button>
        ```
     
-    4. Two-way binding (`[( )]`): Two-way binding allows you to establish a two-way synchronization between a property in the component and an input control in the template. It combines property binding and event binding into a single syntax.
+    4. Two-way binding (`[( )]`): Two-way binding allows you to establish a two-way synchronization between a property in the component and an input control in the template. It combines property binding and event binding into a single syntax. Under the hood it uses @Input and @Output. We can create custom two-way binding as well using @Input property, @Outpu property**Change**
         ```html
         <input [(ngModel)]="name">
         ```
