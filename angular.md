@@ -74,6 +74,30 @@
 
 ---
 
+**Explain data bindings in angular**
+  - Bindings that allow you to establish communication between your component's data and the template
+    1. Interpolation (`{{ }}`): Interpolation is a one-way binding technique that allows you to display component data in the template.
+       ```html
+       <p>Welcome, {{ name }}!</p>
+       ```
+    
+    2. Property binding (`[ ]`): Property binding is a one-way binding technique that allows you to set a property value of an HTML element based on a component property.
+       ```html
+       <img [src]="imageUrl"> <!-- the `src` property of the `<img>` element will be bound to the value of the `imageUrl` property in the component. -->
+       ```
+    
+    3. Event binding (`( )`): Event binding is a one-way binding technique that allows you to listen to events emitted by HTML elements and respond to them in the component.
+       ```html
+       <button (click)="handleClick()">Click me!</button>
+       ```
+    
+    4. Two-way binding (`[( )]`): Two-way binding allows you to establish a two-way synchronization between a property in the component and an input control in the template. It combines property binding and event binding into a single syntax.
+        ```html
+        <input [(ngModel)]="name">
+        ```
+
+---
+
 **How angular works?**
 ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/10b6cee2-6383-4b5d-9b34-74b113a535c9)
 ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/15dff29f-f888-4ae0-8059-4ea7ad28b2ef)
