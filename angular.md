@@ -42,6 +42,38 @@
 
 ---
 
+**Different Ways to share data between Components** https://github.com/Malong11-007/angular-data-sharing
+  1. Input/Output Binding:
+     - Use `@Input` and `@Output` decorators to establish a parent-child relationship between components.
+     - Example: Passing data from a parent component to a child component and vice versa, such as passing user information from a parent component to a child component to display user details.
+  
+  2. Component Communication with ViewChild:
+     - Use `@ViewChild` decorator to get a reference to a child component in the parent component.
+     - Example: Accessing properties or methods of a child component directly from the parent component.
+  
+  3. Services:
+     - Create a service to share data between components.
+     - Use RxJS subjects (Behavior / Replay) to create a centralized data store for sharing data.
+     - Example: Sharing data between unrelated components or components at different levels of the component hierarchy.
+  
+  4. Event Emitters:
+     - Use event emitters to emit custom events and notify other components.
+     - Example: Notifying parent components about specific events or actions performed in child components.
+  
+  5. Route Parameters:
+     - Use route parameters to pass data through the URL.
+     - Example: Passing an ID in the URL to retrieve specific data from a backend server.
+  
+  6. Query Parameters:
+     - Use query parameters to pass data as key-value pairs in the URL.
+     - Example: Filtering or sorting data based on query parameters in a listing page.
+  
+  7. Local Storage/Session Storage:
+     - Store data in the browser's local storage or session storage and access it from different components.
+     - Example: Storing user preferences or temporary data that needs to persist across component instances.
+
+---
+
 **How angular works?**
 ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/10b6cee2-6383-4b5d-9b34-74b113a535c9)
 ![image](https://github.com/Malong11-007/javascript-iq/assets/40298510/15dff29f-f888-4ae0-8059-4ea7ad28b2ef)
