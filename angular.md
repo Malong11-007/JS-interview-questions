@@ -107,22 +107,45 @@
 **Explain angular services**
 
   - Services are a way to organize and share code and data among different components. Services are typically used to encapsulate business logic, data retrieval, or communication with external APIs.
+  - https://dev.to/angular/a-practical-guide-to-providers-in-angular-3c96
   - The @Injectable() decorator in Angular is used to mark a class as injectable. following properties can be used to configure the injectable.
     - **providedIn**: Specifies the module or injector where the service should be provided. It accepts values such as 'root' (provided globally), 'platform' (provided at the platform level), or a specific module name.
     - **useClass**: Specifies a class to use as an alternative implementation for the service. This is useful for providing different implementations for an interface or extending an existing service.
+    - **useExisting**: The useExisting option replaces the provider with a different provider already existing within the application. This option is a great use case for API narrowing
     - **useValue**: Specifies a value to use as the implementation for the service. This is useful when you want to provide a simple value instead of a class instance.
-    - **useFactory**: Specifies a factory function that should be used to create the service instance. This allows for more advanced control over the instantiation process, such as creating a service with custom configuration. 
-    ```typescript
-    // my.service.ts
-    import { Injectable } from '@angular/core';
+    - **useFactory**: Specifies a factory function that should be used to create the service instance. This allows for more advanced control over the instantiation process, such as creating a service with custom configuration.
+  - Singleton (provided in the root):
+    - By default, registering a provider at the root level creates a single shared instance of the dependency across the entire application.
+    - Useful for services that maintain state or provide shared functionality.
+    - Example:
+      ```typescript
+      import { Injectable } from '@angular/core';
     
-    @Injectable()
-    export class MyService {
-      private data: string;
-      constructor() { this.data = 'Hello, World!'; }
-      getData(): string { return this.data; }
-      setData(newData: string): void { this.data = newData; }
-    }
-    ```
-
+      @Injectable({
+        providedIn: 'root',
+      })
+      export class MyService {
+        // ...
+      }
+      ```
+  - Component-level (provided in component metadata):
+    - Specifying a provider at the component level ensures each component instance has its own isolated instance of the dependency.
+    - Helpful when components require separate instances of a service.
+    - Example:
+      ```typescript
+      import { Component } from '@angular/core';
+      import { MyService } from './my.service';
+    
+      @Component({
+        selector: 'my-component',
+        template: `...`,
+        providers: [MyService],
+      })
+      export class MyComponent {
+        constructor(private myService: MyService) {
+          // ...
+        }
+        // ...
+      }
+      ```
 
