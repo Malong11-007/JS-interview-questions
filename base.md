@@ -98,6 +98,27 @@ console.log("Last");
   - 💡 **apply**: Invokes a function with a specified this value and an array of arguments.
   - 💡 **call**: Invokes a function with a specified this value and individual arguments.
   ```JS
+  // Example
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+  };
+  
+  function greet(message) {
+    console.log(`${message}, ${this.firstName} ${this.lastName}`);
+  }
+  
+  // Using bind
+  const greetWithBind = greet.bind(person);
+  greetWithBind("Hello"); // Outputs: Hello, John Doe
+  
+  // Using apply
+  greet.apply(person, ["Hi"]); // Outputs: Hi, John Doe
+  
+  // Using call
+  greet.call(person, "Hey"); // Outputs: Hey, John Doe
+
+
   // PolyFill for bind.
   Function.prototype.myBind = function (obj, ...args) {
     let func = this;
